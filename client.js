@@ -5,10 +5,13 @@ const connect = function () {
     host: 'localhost',
     port: 50541
   });
-
+  // sending info upon connect 
   conn.on("connect", function() {
-    console.log(`Successfully connected to game server`);
-    conn.write(`Name: RJB`)
+    conn.write(`Name: RJB`);
+    // setInterval(() => {
+    //   conn.write(`Move: up`);
+    // }, 50)
+    // conn.write(`Move: up`)
   });
 
   // interpret incoming data as text
