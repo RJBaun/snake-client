@@ -7,6 +7,7 @@ const connect = function () {
   });
   // sending info upon connect 
   conn.on("connect", function() {
+    console.log(`Successfully connected to server`)
     conn.write(`Name: RJB`);
     // setInterval(() => {
     //   conn.write(`Move: up`);
