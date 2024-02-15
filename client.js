@@ -1,13 +1,13 @@
 const net = require("net");
 
-const connect = function () {
+const connect = function() {
   const conn = net.createConnection({
     host: 'localhost',
     port: 50541
   });
-  // sending info upon connect 
+  // sending info upon connect
   conn.on("connect", function() {
-    console.log(`Successfully connected to server`)
+    console.log(`Successfully connected to server`);
     conn.write(`Name: RJB`);
     // setInterval(() => {
     //   conn.write(`Move: up`);
@@ -24,4 +24,4 @@ const connect = function () {
   return conn;
 };
 
-module.exports = { connect };
+module.exports = connect;
