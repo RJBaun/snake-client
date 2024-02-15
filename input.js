@@ -1,6 +1,3 @@
-const connect = require("./client");
-const conn = connect();
-
 let connection;
 
 const setupInput = function(conn) {
@@ -29,6 +26,15 @@ const handleUserInput = function(input) {
   if (input === 'd') {
     connection.write("Move: right");
   }
+  if (input === 'l') {
+    connection.write("Say: LOL")
+  }
+  if (input === 'o') {
+    connection.write("Say: OOF")
+  }
+  if (input === 'y') {
+    connection.write("Say: YEE")
+  }  
 };
 
 module.exports = setupInput;
